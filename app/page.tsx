@@ -9,9 +9,9 @@ export default function Home() {
 };
 
   const sendData = async ()=>{
-    const res = await fetch('http://127.0.0.1:5000/create-checkout-session', requestOptions)
+    const res = await fetch('https://abiec.pythonanywhere.com/create-checkout-session/', requestOptions)
 
-    const data = res.json()
+    const data = await res.json()
 
     console.log(data)
   }
